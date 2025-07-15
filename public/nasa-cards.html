@@ -1,0 +1,54 @@
+nasa-cards.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <script>
+        function bodyload(){
+            fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY&#39')
+            .then(function(response){
+                 return response.json();
+            })
+            .then(function(marsObject){
+                 marsObject.photos.map(function(item){
+                   
+                    var card = document.createElement("div");
+                    card.className = "card m-2 p-2";
+                    card.style.width = "200px";
+                    card.innerHTML = `
+                       <img src=${item.img_src} class="card-img-top" height="150">
+                       <div class="card-header">
+                          <h4>${item.id}</h4>
+                       </div>
+                       <div class="card-body">
+                         <dl>
+                            <dt class="bi bi-camera"> Camera</dt>
+                            <dd>${item.camera.full_name}</dd>
+                            <dt class="bi bi-rocket"> Rover</dt>
+                            <dd>${item.rover.name}</dd>
+                         </dl>
+                       </div>
+                       <div class="card-footer text-center">
+                          <a href=${item.img_src} target="_blank" class="btn bi bi-eye btn-warning"> <span> View </span> </a>
+                       </div>
+                    `;
+                    document.querySelector("section").appendChild(card);
+                 })
+            })
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <h2>Mars Rover Photos</h2>
+    <section class="d-flex flex-wrap">
+
+    </section>
+</body>
+</html>

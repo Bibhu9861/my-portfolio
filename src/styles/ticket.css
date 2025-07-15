@@ -1,0 +1,18 @@
+.ticket {
+    border: 3px double red;
+    background-color: yellow;
+    padding: 20px;
+}
+dt {
+    font-weight: bold;
+    background-color: yellow;
+    color:red;
+    padding: 5px;
+}
+aside {
+    border:1px solid red;
+    padding: 10px;
+    width: 120px;
+    background-color: black;
+    color:white;
+}
