@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../src/scripts/bmi.js"></script>
+    <style>
+        input {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid gray;
+        }
+        .checkWeight {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+    <div class="p-4 m-4 ps-4 ms-4">
+        <h3 class="text-center">BMI Calculator</h3>
+        <label class="form-label mt-3">AGE</label>
+        <div class="input-group">
+            <input type="text" size="8" class="input-group-text" id="txtAge">
+            <span class="input-group-text">Years</span>
+        </div>
+        <label class="form-label mt-3">HEIGHT</label>
+        <div class="input-group">
+            <input type="text" size="8" class="input-group-text" id="txtHeight">
+            <span class="input-group-text">cm</span>
+        </div>
+        <label class="form-label mt-3">WEIGHT</label>
+        <div class="input-group">
+            <input type="text" size="8" class="input-group-text" id="txtWeight">
+            <span class="input-group-text">Kg's</span>
+        </div>
+        <span> weight up to 300 Kgs</span>
+
+        <div>
+            <button onclick="CalculateClick()" class="btn btn-danger w-30 mt-4">Calculate</button>
+        </div>
+    </div>
+    </div>
+    <div class="w-50 mt-4 pt-4">
+        <div class="progress w-100 mt-4" id="statusBar">
+           <div class="progress-bar bg-secondary w-25"></div>
+           <div class="progress-bar bg-success w-25 mx-2"></div>
+           <div class="progress-bar bg-warning w-25"></div>
+           <div class="progress-bar bg-danger w-25 ms-2"></div>
+        </div>
+        <div class="checkWeight">
+           <span>UnderWeight</span>
+           <span>Normal</span>
+           <span>Overweight</span>
+           <span>Obese</span>
+        </div>
+   
+        <div>
+           <div id="checkyourBMI" class="text-center fs-3 mt-4"></div>
+        </div>
+       </div>
+</body>
+</html>
