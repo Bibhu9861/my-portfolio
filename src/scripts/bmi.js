@@ -3,6 +3,22 @@ function CalculateClick(){
     var m = parseFloat(document.getElementById("txtHeight").value)/100;
     var lb = parseFloat(document.getElementById("txtWeight").value);
 
+    if (isNaN(lb) || lb <= 0 || lb > 300) {
+        alert("Weight must be between 1 and 300 kg");
+        return;
+    }
+
+    if (isNaN(m) || m <= 0) {
+        alert("Please enter a valid height");
+        return;
+    }
+
+    if (isNaN(age) || age <= 0 || age > 120) {
+        alert("Please enter a valid age");
+        return;
+    }
+
+
     if(lb > 0 && m > 0) {
      var BMI = (lb/(m*m)).toFixed(2);
 
