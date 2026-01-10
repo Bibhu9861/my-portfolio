@@ -7,34 +7,150 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <style>
+        .about-box {
+  background: rgba(0,0,0,0.4);
+  padding: 25px;
+  border-radius: 12px;
+  width: 450px;
+  margin: auto;
+  transition: transform .35s ease, box-shadow .35s ease;
+  backdrop-filter: blur(6px);
+}
 
+.about-box:hover {
+  transform: perspective(600px) rotateX(6deg) rotateY(-6deg) scale(1.03);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.5);
+}
+    </style>
+    <style>
+    .project-card {
+        width: 220px;
+        height: 120px;
+        background: #1c1c1c;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    .project-card:hover {
+        transform: perspective(500px) rotateX(8deg) rotateY(-8deg) scale(1.05);
+        box-shadow: 0 25px 30px rgba(0,0,0,0.5);
+    }
+</style>
+<style>
+    .skill-title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: 25px;
+}
+
+.skill-tag {
+  background: #111;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 12px;
+  margin: 6px;
+  display: inline-block;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-10px) scale(1.1);
+  background: #000;
+  box-shadow: 0 18px 30px rgba(0,0,0,0.55);
+}
+</style>
 </head>
 <body class="container-fluid bg-secondary text-white" style="height: 1000px;">
    <div class="text-center" >
      <h1>My Portfolio</h1>
     <img src="./public/BIBHUTI.jpg" width="100"  >
     <h2>Bibhutibhusan das</h2>
-    <div>UI Full Stack Web with React developer</div>
-    <div>
-        <p>I'm an MCA graduate with hands-on tranning experience in front-end and back-end development.</p>
-    
+    <div> Full Stack Web Developer</div>
+    <div class="text-center mt-4">
+    <h2>About Me</h2>
+    <div class="about-box mt-3">
+        <p>
+            I'm an MCA graduate with hands-on training in front-end & back-end development.
+            I enjoy building interactive and responsive web applications.
+        </p>
     </div>
+</div>
         <h3>My skills</h3>
-        <div class="btn btn-success bi bi-laptop"> Front-end: <span class = "btn btn-dark">html5</span> <span class="btn btn-dark">css3</span> <span class="btn btn-dark border=5px">Bootstrap</span> <span class="btn btn-dark">Javascript(Es6+)</span>
-            <span class="btn btn-dark">React.js</span> <br> <span class="btn btn-dark mt-3">TypeScript</span> <span class="btn btn-dark mt-3">Redux</span>
-            <span class="btn btn-dark mt-3">Jquery</span> 
-            <span class="btn btn-dark mt-3">Ajax</span> <br><br>
-            <div class="bi bi-server mt-4" style="float: left;"> Back-end: <span class = "btn btn-dark">NodeJS</span> <span class="btn btn-dark">ExpressJs</span> <span class="btn btn-dark border=5px">REST API</span></div><br> <br>
-            <div class="bi bi-database mt-4" style="float: left;"> Database: <span class = "btn btn-dark">MOngoDB</span> <span class="btn btn-dark">MySQL</span></div> <br> <br>
-            <div class="bi bi-tools mt-4" style="float: left;"> Tools: <span class = "btn btn-dark">Git</span> <span class="btn btn-dark">VS code</span> <span class="btn btn-dark border=5px">Postman</span></div>
-        </div>
+        <div class="text-center mt-4">
+  <div class="skill-title bi bi-translate"> language</div>
+  <div>
+    <span class="skill-tag">JavaScript (ES6+</span>
+    <span class="skill-tag">TypeScript</span>
+    <span class="skill-tag">HTML5</span>
+    <span class="skill-tag">CSS3</span>
+  </div>
+      
+  <div class="skill-title bi bi-laptop"> Front-end</div>
+  <div>
+    <span class="skill-tag">React.js</span>
+    <span class="skill-tag">Redux Toolkit</span>
+    <span class="skill-tag">Next.js(basic)</span>
+  </div>
+
+  <div class="skill-title bi bi-house-fill"> UI Libraries</div>
+  <div>
+    <span class="skill-tag">Tailwind CSS</span>
+    <span class="skill-tag">Bootstrap 5</span>
+    <span class="skill-tag">Material UI</span>
+  </div>  
+
+  <div class="skill-title bi bi-server"> Back-end</div>
+  <div>
+    <span class="skill-tag">Node.js</span>
+    <span class="skill-tag">Express.js(basic)</span>
+  </div>
+
+  <div class="skill-title bi bi-database"> Database</div>
+  <div>
+    <span class="skill-tag">MongoDB(CRUD operations)</span>
+    <span class="skill-tag">MySQL(CRUD operations)</span>
+  </div>
+
+  <div class="skill-title bi bi-tools"> Tools</div>
+  <div>
+    <span class="skill-tag">Git</span>
+    <span class="skill-tag">GitHub</span>
+    <span class="skill-tag">VS Code</span>
+    <span class="skill-tag">Postman</span>
+    <span class="skill-tag">Vite</span>
+  </div>
+</div>
+    <div class="mt-5 text-center">
+    <h2>My Projects</h2>
+
+    <div class="d-flex flex-wrap justify-content-center mt-4">
+
+        <a href="./public/emi.html" class="text-white text-decoration-none">
+            <div class="project-card">EMI Calculator</div>
+        </a>
+
+        <a href="./public/nasa-cards.html" class="text-white text-decoration-none">
+            <div class="project-card">NASA Cards</div>
+        </a>
+
+        <a href="./public/bmi.html" class="text-white text-decoration-none">
+            <div class="project-card">BMI Calculator</div>
+        </a>
+
+        <a href="./public/fakestore.html" class="text-white text-decoration-none">
+            <div class="project-card">Fakestore</div>
+        </a>
+        
     </div>
-   <div><br><br><br>
-    <h2>My Project</h2>
-    <a href="./public/emi.html" class="btn btn-dark">EMI Calculator</a>
-    <a href="./public/nasa-cards.html" class="btn btn-dark">NASACARD</a>
-    <a href="./public/bmi.html" class="btn btn-dark">BMI Calculator</a>
-    <a href="./public/fakestore.html" class="btn btn-dark">Fakestore</a>
-   </div>
+</div>
 </body>
 </html>
